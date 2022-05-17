@@ -5,6 +5,9 @@ import { Meta } from "../components/styles/Meta";
 const HomeNavbar = dynamic(() =>
    import("../components/statics/Navbars/NavHome")
 );
+const Properties = dynamic(() =>
+   import("../components/Home/Properties/Properties")
+);
 
 export default function Home() {
    return (
@@ -15,6 +18,7 @@ export default function Home() {
             type="home"
          />
          <Header />
+         <Properties />
       </>
    );
 }
