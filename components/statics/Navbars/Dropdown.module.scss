@@ -1,0 +1,129 @@
+.dropdown {
+   display: flex;
+   align-items: center;
+   margin-right: 40px;
+   cursor: pointer;
+   user-select: none;
+   position: relative;
+
+   svg {
+      margin-right: 10px;
+      transition: 0.3s transform;
+   }
+
+   &_items {
+      width: 140px;
+      position: absolute;
+      bottom: -170%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #1a1a1c;
+      padding: 12px 0;
+      opacity: 0;
+      transition: 0.2s all;
+      border-radius: 1px;
+      pointer-events: none;
+
+      @media screen and (max-width: 768px) {
+         left: 0;
+         transform: translateX(0);
+      }
+
+      a {
+         padding: 8px 16px;
+         display: block;
+         transition: 0.3s background;
+
+         &:hover {
+            background-color: #242426;
+         }
+      }
+   }
+
+   &_items__active {
+      pointer-events: visible;
+      opacity: 1;
+      bottom: -180%;
+   }
+}
+
+.active {
+   svg {
+      transform: rotate(180deg);
+   }
+}
+
+.modal {
+   position: fixed;
+   top: 0;
+   left: 0;
+   background-color: rgba($color: #000000, $alpha: 0.8);
+   width: 100%;
+   height: 100%;
+   opacity: 0;
+   pointer-events: none;
+   transition: 0.1s opacity;
+
+   &_items {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.9);
+      padding: 24px;
+      background-color: #19191b;
+      opacity: 0;
+      transition: 0.3s all;
+      transition-delay: 0.1s;
+
+      @media screen and (max-width: 500px) {
+         width: calc(100% - 48px);
+      }
+
+      &__head {
+         margin-bottom: 32px;
+
+         h4 {
+            margin-bottom: 8px;
+         }
+      }
+
+      &__buttons {
+         display: flex;
+
+         button {
+            padding: 14px 71px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+
+            @media screen and (max-width: 500px) {
+               padding: 9px 0;
+               width: 50%;
+            }
+
+            h4 {
+               pointer-events: none;
+            }
+         }
+
+         &___cancel {
+            margin-right: 8px;
+            background-color: #242427;
+         }
+
+         &___exit {
+            background-color: var(--orange);
+         }
+      }
+   }
+}
+
+.modal_active {
+   pointer-events: visible;
+   opacity: 1;
+
+   .modal_items {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+   }
+}

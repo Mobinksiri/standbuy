@@ -1,0 +1,39 @@
+.nav_items {
+   display: flex;
+   list-style: none;
+   height: 100%;
+   align-items: center;
+   position: relative;
+
+   &__item {
+      height: 100%;
+      margin-right: 38px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+   }
+
+   &__item:first-child {
+      margin-right: 0;
+   }
+
+   &__ellipse {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 0;
+      height: 2px;
+      pointer-events: none;
+      transition: 0.4s all;
+
+      span {
+         width: 100px;
+         height: 2px;
+         background-color: var(--white);
+         transition: 0.4s all;
+         border-radius: 1px;
+      }
+   }
+}

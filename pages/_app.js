@@ -1,7 +1,13 @@
-import '../styles/globals.css'
+import { Meta } from "../components/styles/Meta";
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+   return (
+      <>
+         <Meta />
+         <Component {...pageProps} />
+      </>
+   );
 }
 
-export default MyApp
+export default MyApp;
