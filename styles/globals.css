@@ -26,6 +26,10 @@ body {
    direction: rtl;
 }
 
+body {
+   padding-top: 87px;
+}
+
 ul,
 li {
    list-style: none;

@@ -3,7 +3,12 @@
    border-bottom: 1px solid #292929;
    padding: 0px 60px;
    transition: background 0.3s;
-   min-height: 86px;
+   height: 87px;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 1000;
 
    @media screen and (max-width: 768px) {
       padding: 0px 34px;

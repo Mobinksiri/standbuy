@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 import Header from "../components/Home/Header/Header";
+import Section from "../components/Home/Section/Section";
 import { Meta } from "../components/styles/Meta";
 
 const HomeNavbar = dynamic(() =>
@@ -19,6 +20,7 @@ export default function Home() {
          />
          <Header />
          <Properties />
+         <Section />
       </>
    );
 }

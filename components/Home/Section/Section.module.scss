@@ -1,0 +1,103 @@
+.section {
+   background-color: var(--black);
+   padding: 120px 0;
+   background-color: #1a1a1c;
+
+   @media screen and (max-width: 425px) {
+      padding: 50px 0;
+   }
+
+   .swiper {
+      overflow: visible;
+   }
+
+   &_box {
+      display: flex;
+      flex-flow: column;
+
+      &__post {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         margin-bottom: 120px;
+
+         @media screen and (max-width: 768px) {
+            flex-flow: column-reverse;
+         }
+         @media screen and (max-width: 425px) {
+            margin-bottom: 48px;
+         }
+
+         &___image {
+            width: 50%;
+            height: 320px;
+
+            @media screen and (max-width: 1024px) {
+               width: 45%;
+            }
+
+            @media screen and (max-width: 768px) {
+               width: 100%;
+               margin-bottom: 20px;
+               height: 420px;
+            }
+
+            @media screen and (max-width: 550px) {
+               height: 300px;
+            }
+
+            @media screen and (max-width: 425px) {
+               margin-bottom: 16px;
+               height: 200px;
+            }
+
+            img {
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+            }
+         }
+
+         &___dec {
+            width: 40%;
+
+            @media screen and (max-width: 1024px) {
+               width: 50%;
+            }
+
+            @media screen and (max-width: 768px) {
+               width: 100%;
+            }
+
+            h2 {
+               margin-bottom: 8px;
+
+               @media screen and (max-width: 425px) {
+                  margin-bottom: 4px;
+                  font-size: 20px !important;
+                  line-height: 30px !important;
+               }
+            }
+
+            p {
+               @media screen and (max-width: 425px) {
+                  font-size: 14px !important;
+                  line-height: 21px !important;
+               }
+            }
+         }
+      }
+
+      &__post:last-child {
+         margin-bottom: 0;
+      }
+
+      &__post:nth-of-type(2n - 2) {
+         flex-flow: row-reverse;
+
+         @media screen and (max-width: 768px) {
+            flex-flow: column-reverse;
+         }
+      }
+   }
+}
