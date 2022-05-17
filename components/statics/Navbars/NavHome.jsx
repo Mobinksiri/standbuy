@@ -30,7 +30,7 @@ const NavHome = ({ nav, type }) => {
 
    // width
    const windowWidth = useWidth();
-   const breakpoint = 1050;
+   const breakpoint = 1024;
 
    // components in any sizes of screen
    const DesktopNav = (
