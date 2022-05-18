@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const Text = ({ color, type, element = "p", children, onClick }) => {
+const Text = ({ color, type, element = "p", children, onClick, id }) => {
    // states
    const [fontColor, setFontColor] = useState(color);
    const [family, setFamily] = useState("normal");
@@ -71,6 +71,11 @@ const Text = ({ color, type, element = "p", children, onClick }) => {
             break;
          case "Body4":
             setFamily("iranSans-bold");
+            setSize("14px");
+            setHeight("21px");
+            break;
+         case "Body4":
+            setFamily("iranSans-bold");
             setSize("16px");
             setHeight("18px");
             break;
@@ -138,7 +143,7 @@ const Text = ({ color, type, element = "p", children, onClick }) => {
    }, []);
 
    return (
-      <CustomTag onClick={onClick} style={TextStyle}>
+      <CustomTag id={id} onClick={onClick} style={TextStyle}>
          {children}
       </CustomTag>
    );

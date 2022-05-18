@@ -1,0 +1,96 @@
+@font-face {
+   font-family: "iranSans-extraBold";
+   src: url(../public/font/IRANSansXV.ttf);
+   font-weight: 800;
+}
+@font-face {
+   font-family: "iranSans-bold";
+   src: url(../public/font/IRANSansXV.ttf);
+   font-weight: 700;
+}
+@font-face {
+   font-family: "iranSans-medium";
+   src: url(../public/font/IRANSansXV.ttf);
+   font-weight: 400;
+}
+@font-face {
+   font-family: "iranSans-normal";
+   src: url(../public/font/IRANSansXV.ttf);
+   font-weight: 300;
+}
+@font-face {
+   font-family: "iranSans-number";
+   src: url(../public/font/IRANSansXFaNum-Medium.ttf);
+}
+
+html,
+body {
+   font-family: "iranSans-normal";
+   padding: 0;
+   margin: 0;
+   direction: rtl;
+   scroll-behavior: smooth;
+}
+
+span {
+   font-family: "iranSans-number";
+}
+
+body {
+   padding-top: 87px;
+   background-color: var(--black);
+}
+
+ul,
+li {
+   list-style: none;
+}
+
+a {
+   color: inherit;
+   text-decoration: none;
+}
+
+*,
+*:before,
+*:after {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+
+:root {
+   --black: #000;
+   --orange: #fa6256;
+   --white: #fff;
+}
+
+.economical {
+   border-top: 8px solid #303134;
+
+   button {
+      border: 1px solid var(--white) !important;
+      background-color: transparent;
+   }
+}
+
+.advanced {
+   border-top: 8px solid #652a21;
+
+   button {
+      background-color: var(--orange);
+   }
+}
+
+.soon {
+   border-top: 8px solid #223d51;
+   margin-left: 0;
+
+   button {
+      background-color: #242427;
+
+      h6 {
+         color: #7e7e7e !important;
+      }
+   }
+}
