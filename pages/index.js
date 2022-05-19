@@ -7,6 +7,7 @@ import NavHome from "../components/statics/Navbars/NavHome";
 import Plans from "../components/Home/Plans/Plans";
 import Accordion from "../components/Home/Accordion/Accordion";
 import Blog from "../components/Home/Blog/Blog";
+import Questions from "../components/Home/Questions/Questions";
 
 // const HomeNavbar = dynamic(() =>
 //    import("../components/statics/Navbars/NavHome")
@@ -29,6 +30,7 @@ export default function Home() {
          <Plans />
          <Accordion />
          <Blog />
+         <Questions />
       </>
    );
 }
