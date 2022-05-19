@@ -1,0 +1,129 @@
+.accordion {
+   padding-bottom: 120px;
+
+   @media screen and (max-width: 425px) {
+      padding-bottom: 80px;
+   }
+
+   &_box {
+      position: relative;
+
+      &__item {
+         width: 100%;
+         height: fit-content;
+         margin-bottom: 40px;
+
+         @media screen and (max-width: 425px) {
+            margin-bottom: 24px;
+         }
+
+         &___dec {
+            width: 50%;
+            padding-right: 24px;
+            border-right: 2px solid transparent;
+
+            @media screen and (max-width: 1024px) {
+               width: 100%;
+            }
+
+            @media screen and (max-width: 425px) {
+               padding-right: 16px;
+            }
+
+            h4 {
+               margin-bottom: 10px;
+               cursor: pointer;
+               transition: 0.3s color;
+
+               @media screen and (max-width: 425px) {
+                  font-size: 20px !important;
+                  line-height: 30px !important;
+               }
+            }
+
+            p {
+               max-height: 0px;
+               opacity: 0;
+               pointer-events: none;
+
+               @media screen and (max-width: 1024px) {
+                  margin-bottom: 16px;
+               }
+
+               @media screen and (max-width: 425px) {
+                  font-size: 14px !important;
+                  line-height: 21px !important;
+               }
+            }
+         }
+
+         &___image {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 424px;
+            height: 473px;
+
+            @media screen and (max-width: 1024px) {
+               width: 70%;
+               height: 400px;
+               position: static;
+               display: none;
+            }
+
+            @media screen and (max-width: 768px) {
+               width: 100%;
+            }
+
+            @media screen and (max-width: 550px) {
+               height: 333px;
+            }
+
+            @media screen and (max-width: 425px) {
+               height: 233px;
+            }
+
+            img {
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+               opacity: 0;
+               pointer-events: none;
+               transform: scale(0.95);
+               transition: 0.3s all;
+            }
+         }
+      }
+
+      &__item___active {
+         @media screen and (max-width: 425px) {
+            margin-bottom: 32px;
+         }
+
+         .accordion_box__item___dec {
+            border-right: 2px solid #818181;
+
+            h4 {
+               color: var(--white) !important;
+            }
+
+            p {
+               max-height: 500px;
+               opacity: 1;
+               pointer-events: visible;
+            }
+         }
+         .accordion_box__item___image {
+            @media screen and (max-width: 1024px) {
+               display: block;
+            }
+
+            img {
+               opacity: 1;
+               transform: scale(1);
+               pointer-events: visible;
+            }
+         }
+      }
+   }
+}

@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from "react";
 
-const Text = ({ color, type, element = "p", children, onClick, id }) => {
+const Text = ({
+   color,
+   className,
+   type,
+   element = "p",
+   children,
+   onClick,
+   id,
+}) => {
    // states
    const [fontColor, setFontColor] = useState(color);
    const [family, setFamily] = useState("normal");
@@ -143,7 +151,12 @@ const Text = ({ color, type, element = "p", children, onClick, id }) => {
    }, []);
 
    return (
-      <CustomTag id={id} onClick={onClick} style={TextStyle}>
+      <CustomTag
+         className={className}
+         id={id}
+         onClick={onClick}
+         style={TextStyle}
+      >
          {children}
       </CustomTag>
    );

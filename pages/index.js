@@ -5,6 +5,7 @@ import { Meta } from "../components/styles/Meta";
 import Properties from "../components/Home/Properties/Properties";
 import NavHome from "../components/statics/Navbars/NavHome";
 import Plans from "../components/Home/Plans/Plans";
+import Accordion from "../components/Home/Accordion/Accordion";
 
 // const HomeNavbar = dynamic(() =>
 //    import("../components/statics/Navbars/NavHome")
@@ -25,6 +26,7 @@ export default function Home() {
          <Properties />
          <Section />
          <Plans />
+         <Accordion />
       </>
    );
 }
