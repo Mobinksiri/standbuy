@@ -2,9 +2,9 @@ import React from "react";
 import classes from "./Accordion.module.scss";
 import Text from "../../styles/Text";
 
-const AccordionItem = ({ paragraph, title, image, headClick }) => {
+const AccordionItem = ({ paragraph, title, image, headClick, className }) => {
    return (
-      <div className={classes.accordion_box__item}>
+      <div className={className}>
          <div className={classes.accordion_box__item___dec}>
             <Text onClick={headClick} element="h4" color="#818181" type="Head4">
                {title}
