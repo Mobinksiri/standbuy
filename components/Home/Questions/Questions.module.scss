@@ -82,6 +82,7 @@
                h4 {
                   transition: 0.3s all;
                   width: calc(100% - 50px);
+                  user-select: none;
 
                   @media screen and (max-width: 768px) {
                      line-height: 35px !important;
@@ -123,10 +124,22 @@
                pointer-events: none;
                transition: 0.3s all;
                margin-bottom: 0;
+               width: 100% !important;
 
                @media screen and (max-width: 425px) {
                   font-size: 14px !important;
                   line-height: 24px !important;
+               }
+            }
+
+            &____pActive {
+               opacity: 1 !important;
+               max-height: 400px !important;
+               pointer-events: visible !important;
+               margin-bottom: 32px !important;
+
+               @media screen and (max-width: 425px) {
+                  margin-bottom: 16px !important;
                }
             }
          }
@@ -136,17 +149,6 @@
          }
 
          &___question____active {
-            p {
-               opacity: 1;
-               max-height: 400px;
-               pointer-events: visible;
-               margin-bottom: 32px;
-
-               @media screen and (max-width: 425px) {
-                  margin-bottom: 16px;
-               }
-            }
-
             .questions_box__questions___question____title {
                &_____plus {
                   span {

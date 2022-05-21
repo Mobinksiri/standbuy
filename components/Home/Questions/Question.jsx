@@ -2,7 +2,13 @@ import React from "react";
 import classes from "./Questions.module.scss";
 import Text from "../../styles/Text";
 
-const Question = ({ title, paragraph, className, onClick }) => {
+const Question = ({
+   title,
+   paragraph,
+   className,
+   onClick,
+   paragraphClassName,
+}) => {
    return (
       <div className={className}>
          <div
@@ -21,7 +27,13 @@ const Question = ({ title, paragraph, className, onClick }) => {
                <span></span>
             </div>
          </div>
-         <Text type="Paragraph2" element="p" color="#C0C0C0">
+         <Text
+            className={paragraphClassName}
+            id="question_paragraph"
+            type="Paragraph2"
+            element="p"
+            color="#C0C0C0"
+         >
             {paragraph}
          </Text>
       </div>

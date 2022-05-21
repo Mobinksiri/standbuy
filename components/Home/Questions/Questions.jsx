@@ -3,21 +3,21 @@ import classes from "./Questions.module.scss";
 import Text from "../../styles/Text";
 import Question from "./Question";
 import Container from "../../statics/Container/Container";
+import $ from "jquery";
 
 const Questions = () => {
    const openQuestionHandler = (e) => {
-      const questions = document.querySelector("#questions_list");
-      const questionsArray = Array.from(questions.children);
-      for (let index = 0; index < questionsArray.length; index++) {
-         const element = questionsArray[index];
-         element.classList.remove(
-            classes.questions_box__questions___question____active
-         );
-      }
+      // paragraph
+      const paragraph = e.target.parentElement.children[1];
+      const paragraphClass =
+         classes.questions_box__questions___question____pActive;
+      $(paragraph).toggleClass(paragraphClass.toString());
+
+      // question
+      const questionClass =
+         classes.questions_box__questions___question____active;
       const question = e.target.parentElement;
-      question.classList.add(
-         classes.questions_box__questions___question____active
-      );
+      $(question).toggleClass(questionClass.toString());
    };
 
    return (
@@ -55,6 +55,9 @@ const Questions = () => {
                   className={classes.questions_box__questions}
                >
                   <Question
+                     paragraphClassName={
+                        classes.questions_box__questions___question____pActive
+                     }
                      onClick={openQuestionHandler}
                      className={`${classes.questions_box__questions___question} ${classes.questions_box__questions___question____active}`}
                      title="من کارت ملی هوشمند دریافت نکرده‌ام، آیا می‌توانم حساب بازکنم؟"

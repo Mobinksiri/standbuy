@@ -1,13 +1,7 @@
 import dynamic from "next/dynamic";
 import Header from "../components/Home/Header/Header";
-// import Section from "../components/Home/Section/Section";
 import { Meta } from "../components/styles/Meta";
-// import Properties from "../components/Home/Properties/Properties";
-// import NavHome from "../components/statics/Navbars/NavHome";
-// import Plans from "../components/Home/Plans/Plans";
 import Accordion from "../components/Home/Accordion/Accordion";
-// import Blog from "../components/Home/Blog/Blog";
-import Questions from "../components/Home/Questions/Questions";
 import Footer from "../components/Home/Footer/Footer";
 import NewsLetters from "../components/Home/NewsLetters/NewsLetters";
 
@@ -18,6 +12,9 @@ const Properties = dynamic(() =>
 const Section = dynamic(() => import("../components/Home/Section/Section"));
 const Plans = dynamic(() => import("../components/Home/Plans/Plans"));
 const Blog = dynamic(() => import("../components/Home/Blog/Blog"));
+const Questions = dynamic(() =>
+   import("../components/Home/Questions/Questions")
+);
 
 export default function Home() {
    return (
