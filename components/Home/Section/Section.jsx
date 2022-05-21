@@ -50,6 +50,7 @@ const Section = () => {
          className={classes.swiper}
          spaceBetween={width > breakpointMobile ? 25 : 10}
          slidesPerView={1}
+         grabCursor={true}
       >
          <SwiperSlide>
             <SectionPost

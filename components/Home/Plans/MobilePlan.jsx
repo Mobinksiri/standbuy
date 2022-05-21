@@ -14,6 +14,7 @@ const MobilePlan = ({ width, breakpointMobile, openModal }) => {
          className={classes.swiper}
          spaceBetween={width > breakpointMobile ? 15 : 10}
          slidesPerView={width > 550 ? 2 : 1}
+         grabCursor={true}
       >
          <SwiperSlide>
             <Plan

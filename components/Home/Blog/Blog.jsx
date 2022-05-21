@@ -50,6 +50,7 @@ const Blog = () => {
          className={classes.swiper}
          spaceBetween={width > breakpointMobile ? 20 : 10}
          slidesPerView={width > breakpoint ? 2 : 1}
+         grabCursor={true}
       >
          <SwiperSlide className={classes.swiper_swiperSlider}>
             <Post

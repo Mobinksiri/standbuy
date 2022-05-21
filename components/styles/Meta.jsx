@@ -5,7 +5,7 @@ export const Meta = ({ title, keywords, description }) => {
       <Head>
          <title>StandBuy {title}</title>
          <meta name="description" content={description} />
-         <link rel="icon" href="/favicon.ico" />
+         <link rel="icon" href="/logo.png" />
          <meta name="keywords" content={keywords} />
          <meta name="author" content="Mobin Kasiri" />
          <meta
