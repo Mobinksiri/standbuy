@@ -6,7 +6,7 @@ import Container from "../../statics/Container/Container";
 
 const Questions = () => {
    const openQuestionHandler = (e) => {
-      const questions = document.querySelector("#questions");
+      const questions = document.querySelector("#questions_list");
       const questionsArray = Array.from(questions.children);
       for (let index = 0; index < questionsArray.length; index++) {
          const element = questionsArray[index];
@@ -21,7 +21,7 @@ const Questions = () => {
    };
 
    return (
-      <div className={classes.questions}>
+      <div id="questions" className={classes.questions}>
          <Container>
             <div className={classes.questions_box}>
                <div className={classes.questions_box__header}>
@@ -50,7 +50,10 @@ const Questions = () => {
                      مخاطبان پرسیده می‌شود را مشاهده نمائید.
                   </Text>
                </div>
-               <div id="questions" className={classes.questions_box__questions}>
+               <div
+                  id="questions_list"
+                  className={classes.questions_box__questions}
+               >
                   <Question
                      onClick={openQuestionHandler}
                      className={`${classes.questions_box__questions___question} ${classes.questions_box__questions___question____active}`}

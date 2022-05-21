@@ -32,16 +32,24 @@ const NavHome = ({ nav, type }) => {
    const windowWidth = useWidth();
    const breakpoint = 1024;
 
+   // nav process
+   const navProcessHandler = (id) => {
+      const section = document.querySelector(`#${id}`);
+      document.documentElement.scrollTop = section.offsetTop - 86;
+   };
+
    // components in any sizes of screen
    const DesktopNav = (
       <>
          <div className={classes.navbar_box__nav___avatar}>
             <img src="/navbar/avatar.jpg" alt="" />
          </div>
-         <UList navItems={nav} />
+         <UList onClick={navProcessHandler} navItems={nav} />
       </>
    );
-   const MobileNav = <Hamburger hamburgerItems={nav} />;
+   const MobileNav = (
+      <Hamburger onClick={navProcessHandler} hamburgerItems={nav} />
+   );
 
    return (
       <div id="navbar" className={classes.navbar}>
@@ -50,7 +58,6 @@ const NavHome = ({ nav, type }) => {
             <div className={classes.navbar_box__nav}>
                {windowWidth > breakpoint ? DesktopNav : MobileNav}
             </div>
-
             {/* information  */}
             <div
                id="navbar_information"

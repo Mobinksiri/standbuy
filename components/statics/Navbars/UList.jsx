@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./UList.module.scss";
 import Text from "../../styles/Text";
 
-const UList = ({ navItems }) => {
+const UList = ({ navItems, onClick }) => {
    const mouseHoverHandler = (e) => {
       const ellipse = document.querySelector("#navbar_ellipse");
       ellipse.style.left = `${e.target.offsetLeft}px`;
@@ -24,10 +24,11 @@ const UList = ({ navItems }) => {
                }}
                onMouseLeave={mouseLeaveHandler}
                className={classes.nav_items__item}
-               key={nav}
+               key={nav.id}
+               onClick={() => onClick(nav.id)}
             >
                <Text type="HeadLink" element="a" color="white">
-                  {nav}
+                  {nav.title}
                </Text>
             </li>
          ))}

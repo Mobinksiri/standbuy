@@ -73,7 +73,7 @@ const Plans = () => {
    };
 
    return (
-      <div className={classes.plans}>
+      <div id="prices" className={classes.plans}>
          <Container>
             {/* plans */}
             <div className={classes.plans_box}>

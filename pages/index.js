@@ -9,8 +9,7 @@ import Accordion from "../components/Home/Accordion/Accordion";
 // import Blog from "../components/Home/Blog/Blog";
 import Questions from "../components/Home/Questions/Questions";
 import Footer from "../components/Home/Footer/Footer";
-import Input from "../components/styles/Input/Input";
-import NewsLetters from "../components/NewsLetters/NewsLetters";
+import NewsLetters from "../components/Home/NewsLetters/NewsLetters";
 
 const NavHome = dynamic(() => import("../components/statics/Navbars/NavHome"));
 const Properties = dynamic(() =>
@@ -25,7 +24,13 @@ export default function Home() {
       <>
          <Meta title="Home" />
          <NavHome
-            nav={["ویژگی ها", "قیمت ها", "وبلاگ", "سوالات متداول", "خبرنامه"]}
+            nav={[
+               { title: "ویژگی ها", id: "attr" },
+               { title: "قیمت ها", id: "prices" },
+               { title: "وبلاگ", id: "blog" },
+               { title: "سوالات متداول", id: "questions" },
+               { title: "خبرنامه", id: "newsletter" },
+            ]}
             type="home"
          />
          <Header />

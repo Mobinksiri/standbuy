@@ -77,7 +77,7 @@ const Blog = () => {
    );
 
    return (
-      <div className={classes.blog}>
+      <div id="blog" className={classes.blog}>
          <Container>
             <div className={classes.blog_box}>
                <div className={classes.blog_box__head}>
