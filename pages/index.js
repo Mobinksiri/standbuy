@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 import Header from "../components/Home/Header/Header";
 import { Meta } from "../components/styles/Meta";
 import Accordion from "../components/Home/Accordion/Accordion";
-import Footer from "../components/Home/Footer/Footer";
+import Footer from "../components/statics/Footer/Footer";
 import NewsLetters from "../components/Home/NewsLetters/NewsLetters";
 
 const NavHome = dynamic(() => import("../components/statics/Navbars/NavHome"));
@@ -19,10 +19,9 @@ const Questions = dynamic(() =>
 export default function Home() {
    return (
       <>
-         <Meta title="Home" />
          <NavHome
             nav={[
-               { title: "ویژگی ها", id: "attr" },
+               { title: "ویژگی ها", id: "attributes" },
                { title: "قیمت ها", id: "prices" },
                { title: "وبلاگ", id: "blog" },
                { title: "سوالات متداول", id: "questions" },

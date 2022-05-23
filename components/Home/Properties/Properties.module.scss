@@ -1,33 +1,39 @@
 .properties {
    background-color: var(--black);
+   padding-top: 90px;
    padding-bottom: 120px;
 
    @media screen and (max-width: 425px) {
+      padding-top: 86px;
       padding-bottom: 50px;
    }
 
    &_arrow {
       display: flex;
       justify-content: center;
-      margin-bottom: 60px;
+      margin-bottom: 70px;
       padding: 5px 0;
+
+      @media screen and (max-width: 425px) {
+         margin-bottom: 40px;
+      }
 
       svg {
          animation-name: arrow;
          animation-duration: 1.5s;
          animation-iteration-count: infinite;
-         transform: translateY(-5px);
+         transform: translateY(0);
       }
 
       @keyframes arrow {
          0% {
-            transform: translateY(-5px);
+            transform: translateY(0);
          }
          50% {
-            transform: translateY(5px);
+            transform: translateY(10px);
          }
          100% {
-            transform: translateY(-5px);
+            transform: translateY(0);
          }
       }
    }

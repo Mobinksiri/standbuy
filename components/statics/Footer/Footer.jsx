@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import classes from "./Footer.module.scss";
 import Text from "../../styles/Text";
-import Container from "../../statics/Container/Container";
+import Container from "../Container/Container";
 
 const Footer = () => {
    return (
@@ -75,7 +75,7 @@ const Footer = () => {
                   </div>
                </div>
                <div className={classes.footer_box__poster}>
-                  <img src="./footer/frames.png" alt="" />
+                  <img src="/footer/frames.png" alt="" />
                </div>
             </div>
          </Container>

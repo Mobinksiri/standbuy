@@ -2,10 +2,10 @@
    width: 300px !important;
 }
 .blog {
-   padding-bottom: 120px;
+   padding-top: 120px;
 
    @media screen and (max-width: 425px) {
-      padding-bottom: 80px;
+      padding-top: 90px;
    }
 
    &_box {
@@ -115,7 +115,8 @@
                   margin-bottom: 5px;
                   cursor: pointer;
                }
-               p {
+               &_____body {
+                  color: #c0c0c0;
                   display: -webkit-box;
                   max-width: 100%;
                   -webkit-line-clamp: 3;

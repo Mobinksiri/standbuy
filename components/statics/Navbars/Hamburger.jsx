@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import classes from "./Hamburger.module.scss";
 import Text from "../../styles/Text";
 
-const Hamburger = ({ hamburgerItems, onClick }) => {
-   const [active, setActive] = useState(false);
-
-   const navbarActiveHandler = () => {
-      setActive(!active);
-   };
-
+const Hamburger = ({
+   hamburgerItems,
+   onClick,
+   navbarActiveHandler,
+   active,
+}) => {
    useEffect(() => {
       const navbar = document.querySelector("#navbar");
       active

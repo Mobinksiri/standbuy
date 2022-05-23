@@ -32,9 +32,9 @@
       border: 1px solid #ff7676;
    }
 
-   input:invalid[value=""] {
-      border: 1px solid #6d6d75;
-   }
+   // input:invalid[value=""] {
+   //    border: 1px solid #6d6d75;
+   // }
 
    input:invalid[focused="true"] ~ span {
       display: block;

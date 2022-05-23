@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Text from "../../styles/Text";
 import classes from "./Dropdown.module.scss";
 
-const Dropdown = () => {
+const Dropdown = ({ dropDownStyle }) => {
    const [active, setActive] = useState(false);
    const [modal, setModal] = useState(false);
 
@@ -49,6 +49,7 @@ const Dropdown = () => {
                <path d="M1 0.5L6 5.5L11 0.5" stroke="white" strokeWidth="1.4" />
             </svg>
             <div
+               style={dropDownStyle}
                className={
                   active
                      ? `${classes.dropdown_items} ${classes.dropdown_items__active}`

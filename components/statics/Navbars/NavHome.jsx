@@ -4,9 +4,11 @@ import classes from "./NavHome.module.scss";
 import Text from "../../styles/Text";
 import Hamburger from "./Hamburger";
 import Dropdown from "./Dropdown";
+import { useRouter } from "next/router";
 
 const NavHome = ({ nav, type }) => {
    const [call, setCall] = useState(false);
+   const router = useRouter();
 
    // get information length for show or not show call
    const getInformationHandler = () => {
@@ -34,8 +36,14 @@ const NavHome = ({ nav, type }) => {
 
    // nav process
    const navProcessHandler = (id) => {
-      const section = document.querySelector(`#${id}`);
-      document.documentElement.scrollTop = section.offsetTop - 86;
+      router.push("/" + `#${id}`);
+      console.log(router.asPath);
+   };
+
+   // hamburger navbar active
+   const [activeNav, setActiveNav] = useState(false);
+   const navbarActiveHandler = () => {
+      setActiveNav(!activeNav);
    };
 
    // components in any sizes of screen
@@ -48,7 +56,12 @@ const NavHome = ({ nav, type }) => {
       </>
    );
    const MobileNav = (
-      <Hamburger onClick={navProcessHandler} hamburgerItems={nav} />
+      <Hamburger
+         navbarActiveHandler={navbarActiveHandler}
+         active={activeNav}
+         onClick={navProcessHandler}
+         hamburgerItems={nav}
+      />
    );
 
    return (
@@ -98,7 +111,11 @@ const NavHome = ({ nav, type }) => {
                      </Text>
                   </button>
                ) : type === "user" ? (
-                  <Dropdown />
+                  <Dropdown
+                     dropDownStyle={{
+                        backgroundColor: activeNav ? "#2D2D31" : "#1a1a1c",
+                     }}
+                  />
                ) : null}
             </div>
          </div>

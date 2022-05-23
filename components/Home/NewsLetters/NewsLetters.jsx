@@ -3,9 +3,11 @@ import classes from "./NewsLetters.module.scss";
 import Input from "../../styles/Input/Input";
 import Text from "../../styles/Text";
 import Container from "../../statics/Container/Container";
+import { useRouter } from "next/router";
 
 const NewsLetters = () => {
    const [inputValue, setInputValue] = useState("");
+   const router = useRouter();
 
    const newsInput = {
       name: "newsLetters",
@@ -52,10 +54,10 @@ const NewsLetters = () => {
    const navProcessHandler = (e) => {
       const id = e.target.parentElement.id;
       if (id == "top") {
+         router.push("/");
          document.documentElement.scrollTop = 0;
       } else {
-         const section = document.querySelector(`#${id}`);
-         document.documentElement.scrollTop = section.offsetTop - 86;
+         router.push("/" + `#${id}`);
       }
    };
 

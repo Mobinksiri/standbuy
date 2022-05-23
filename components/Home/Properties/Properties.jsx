@@ -193,7 +193,7 @@ const Properties = () => {
    );
 
    return (
-      <div id="attr" className={classes.properties}>
+      <div id="attributes" className={classes.properties}>
          <Container>
             <div className={classes.properties_arrow}>
                <svg

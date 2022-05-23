@@ -3,6 +3,7 @@ import classes from "./Blog.module.scss";
 import Text from "../../styles/Text";
 import Container from "../../statics/Container/Container";
 import Post from "./Post";
+import { posts } from "../../../posts";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -27,21 +28,15 @@ const Blog = () => {
 
    const DesktopPosts = (
       <div className={classes.blog_box__posts}>
-         <Post
-            title="عنوان پست"
-            paragraph="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد."
-            image="./blog/post_1.jpg"
-         />
-         <Post
-            title="عنوان پست"
-            paragraph="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد."
-            image="./blog/post_2.jpg"
-         />
-         <Post
-            title="عنوان پست"
-            paragraph="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد."
-            image="./blog/post_3.jpg"
-         />
+         {posts.map((post) => (
+            <Post
+               key={post.id}
+               title={post.title}
+               paragraph={post.body}
+               image={post.image}
+               id={post.id}
+            />
+         ))}
       </div>
    );
 
@@ -52,29 +47,22 @@ const Blog = () => {
          slidesPerView={width > breakpoint ? 2 : 1}
          grabCursor={true}
       >
-         <SwiperSlide className={classes.swiper_swiperSlider}>
-            <Post
-               title="عنوان پست"
-               paragraph="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد."
-               image="./blog/post_1.jpg"
-            />
-         </SwiperSlide>
-         <SwiperSlide className={classes.swiper_swiperSlider}>
-            <Post
-               title="عنوان پست"
-               paragraph="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد."
-               image="./blog/post_2.jpg"
-            />
-         </SwiperSlide>
-         <SwiperSlide className={classes.swiper_swiperSlider}>
-            <Post
-               title="عنوان پست"
-               paragraph="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد."
-               image="./blog/post_3.jpg"
-            />
-         </SwiperSlide>
+         {posts.map((post) => (
+            <SwiperSlide key={post.id} className={classes.swiper_swiperSlider}>
+               <Post
+                  title={post.title}
+                  paragraph={post.body}
+                  image={post.image}
+                  id={post.id}
+               />
+            </SwiperSlide>
+         ))}
       </Swiper>
    );
+
+   useEffect(() => {
+      window.history.scrollRestoration = "manual";
+   }, []);
 
    return (
       <div id="blog" className={classes.blog}>
