@@ -5,6 +5,7 @@ import Text from "../../styles/Text";
 import Hamburger from "./Hamburger";
 import Dropdown from "./Dropdown";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const NavHome = ({ nav, type }) => {
    const [call, setCall] = useState(false);
@@ -36,8 +37,12 @@ const NavHome = ({ nav, type }) => {
 
    // nav process
    const navProcessHandler = (id) => {
-      router.push("/" + `#${id}`);
-      console.log(router.asPath);
+      console.log(router.pathname);
+      if (router.pathname == "/" || router.pathname == "/blog/[id]") {
+         router.push("/" + `#${id}`);
+      } else {
+         router.push(`/`);
+      }
    };
 
    // hamburger navbar active
@@ -102,14 +107,16 @@ const NavHome = ({ nav, type }) => {
 
                {/* type */}
                {type === "home" ? (
-                  <button
-                     className={classes.navbar_box__information___button}
-                     type="button"
-                  >
-                     <Text element="span" type="HeadLink" color="black">
-                        ورود به پنل کاربری
-                     </Text>
-                  </button>
+                  <Link href="/sign-up">
+                     <button
+                        className={classes.navbar_box__information___button}
+                        type="button"
+                     >
+                        <Text element="span" type="HeadLink" color="black">
+                           ورود به پنل کاربری
+                        </Text>
+                     </button>
+                  </Link>
                ) : type === "user" ? (
                   <Dropdown
                      dropDownStyle={{
