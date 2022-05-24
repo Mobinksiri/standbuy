@@ -1,14 +1,14 @@
 import React from "react";
-import ForgetPassword from "../components/ForgetPassword/ForgetPassword";
 import NavHome from "../components/statics/Navbars/NavHome";
+import SetPassword from "../components/SetPassword/SetPassword";
 
-const ForgetPasswordPage = () => {
+const SetPasswordPage = () => {
    return (
       <>
          <NavHome nav={[{ title: "صفحه اصلی", id: "1" }]} />
-         <ForgetPassword />
+         <SetPassword />
       </>
    );
 };
 
-export default ForgetPasswordPage;
+export default SetPasswordPage;
