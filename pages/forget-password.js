@@ -1,15 +1,14 @@
 import React from "react";
+import ForgetPassword from "../components/ForgetPassword/ForgetPassword";
 import NavHome from "../components/statics/Navbars/NavHome";
-import Container from "../components/statics/Container/Container";
-import SignUp from "../components/SignUp/SignUp";
 
-const signUp = () => {
+const forgetPassword = () => {
    return (
       <>
          <NavHome nav={[{ title: "صفحه اصلی", id: "1" }]} />
-         <SignUp />
+         <ForgetPassword />
       </>
    );
 };
 
-export default signUp;
+export default forgetPassword;
