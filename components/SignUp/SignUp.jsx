@@ -144,11 +144,16 @@ const SignUp = () => {
                      <Text type="Paragraph2" color="#787878" element="a">
                         عضو استندبای هستید؟
                      </Text>
-                     <Link href="/login">
-                        <Text type="HeadLink" color="white" element="h6">
-                           ورود به پنل کاربری
-                        </Text>
-                     </Link>
+                     <Text
+                        onClick={() => {
+                           router.push("/login");
+                        }}
+                        type="HeadLink"
+                        color="white"
+                        element="h6"
+                     >
+                        ورود به پنل کاربری
+                     </Text>
                   </>
                }
             />

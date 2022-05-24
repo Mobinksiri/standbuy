@@ -107,7 +107,7 @@ const NavHome = ({ nav, type }) => {
 
                {/* type */}
                {type === "home" ? (
-                  <Link href="/sign-up">
+                  <Link href="/login">
                      <button
                         className={classes.navbar_box__information___button}
                         type="button"

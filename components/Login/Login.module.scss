@@ -1,0 +1,33 @@
+.login {
+   display: flex;
+   flex-flow: column;
+   align-items: center;
+   margin-top: 64px;
+   margin-bottom: 50px;
+
+   h3 {
+      margin-bottom: 20px !important;
+   }
+
+   &_form {
+      button {
+         transition: 0.3s all;
+      }
+
+      &__buttonActive {
+         h6 {
+            color: var(--white) !important;
+         }
+
+         background-color: var(--orange) !important;
+      }
+   }
+
+   p {
+      color: #db564b;
+      font-size: 12px;
+      font-family: "iranSans-bold";
+      line-height: 26px;
+      cursor: pointer;
+   }
+}
