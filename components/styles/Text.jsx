@@ -82,7 +82,7 @@ const Text = ({
             setSize("14px");
             setHeight("21px");
             break;
-         case "Body4":
+         case "Body5":
             setFamily("iranSans-bold");
             setSize("16px");
             setHeight("18px");

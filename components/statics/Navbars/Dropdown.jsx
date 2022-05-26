@@ -1,13 +1,21 @@
 import React, { useState } from "react";
 import Text from "../../styles/Text";
 import classes from "./Dropdown.module.scss";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 const Dropdown = ({ dropDownStyle }) => {
    const [active, setActive] = useState(false);
    const [modal, setModal] = useState(false);
+   const router = useRouter();
 
    const modalActiveHandler = () => {
       setModal(true);
+   };
+
+   const closePageHandler = () => {
+      setModal(false);
+      router.push("/");
    };
 
    const modalCloseHandler = (e) => {
@@ -56,7 +64,14 @@ const Dropdown = ({ dropDownStyle }) => {
                      : classes.dropdown_items
                }
             >
-               <Text type="Head7" color="white" element="a">
+               <Text
+                  onClick={() => {
+                     router.push("/dashboard");
+                  }}
+                  type="Head7"
+                  color="white"
+                  element="a"
+               >
                   پلن کاربری
                </Text>
                <Text
@@ -90,15 +105,18 @@ const Dropdown = ({ dropDownStyle }) => {
                   </Text>
                </div>
                <div className={classes.modal_items__buttons}>
-                  <button
-                     className={classes.modal_items__buttons___exit}
-                     type="button"
-                     id="exit"
-                  >
-                     <Text type="Head6" color="white" element="h4">
-                        خروج
-                     </Text>
-                  </button>
+                  <Link href="/">
+                     <button
+                        className={classes.modal_items__buttons___exit}
+                        type="button"
+                        id="exit"
+                        // onClick={closePageHandler}
+                     >
+                        <Text type="Head6" color="white" element="h4">
+                           خروج
+                        </Text>
+                     </button>
+                  </Link>
                   <button
                      className={classes.modal_items__buttons___cancel}
                      type="button"

@@ -1,0 +1,105 @@
+.account {
+   width: calc(100% - 260px);
+
+   @media screen and (max-width: 768px) {
+      width: 100%;
+   }
+
+   &_information {
+      border-bottom: 1px solid #292929;
+      width: 100%;
+
+      @media screen and (max-width: 768px) {
+         display: flex;
+         justify-content: center;
+      }
+
+      &__box {
+         padding: 40px 40px 30px 40px;
+
+         @media screen and (max-width: 768px) {
+            width: 70%;
+         }
+
+         @media screen and (max-width: 600px) {
+            width: 100%;
+         }
+
+         h6 {
+            margin-bottom: 24px;
+            opacity: 0.6;
+         }
+
+         &___form {
+            max-width: 320px;
+
+            &____button {
+               margin-top: 10px;
+               padding: 14px 24px;
+               border: none;
+               outline: none;
+               background-color: #19191c;
+               border-radius: 1px;
+               cursor: pointer;
+               transition: 0.3s all;
+
+               h6 {
+                  margin-bottom: 0;
+                  opacity: 1;
+               }
+            }
+
+            &____button_____active {
+               background-color: var(--orange);
+
+               h6 {
+                  color: var(--white) !important;
+               }
+            }
+         }
+      }
+   }
+
+   &_password {
+      width: 100%;
+
+      @media screen and (max-width: 768px) {
+         display: flex;
+         justify-content: center;
+      }
+
+      &__box {
+         padding: 40px 40px 30px 40px;
+
+         @media screen and (max-width: 768px) {
+            width: 70%;
+         }
+
+         @media screen and (max-width: 600px) {
+            width: 100%;
+         }
+
+         h6 {
+            margin-bottom: 30px;
+            opacity: 0.6;
+         }
+
+         &___button {
+            padding: 14px 24px;
+            border: none;
+            outline: none;
+            background-color: #19191c;
+            border-radius: 1px;
+            cursor: pointer;
+            transition: 0.3s all;
+            background-color: var(--orange);
+
+            h6 {
+               margin-bottom: 0;
+               opacity: 1;
+               color: var(--white) !important;
+            }
+         }
+      }
+   }
+}

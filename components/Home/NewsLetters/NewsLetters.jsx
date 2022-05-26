@@ -126,7 +126,7 @@ const NewsLetters = () => {
                         </Text>
                      </li>
                      <li
-                        id="attr"
+                        id="attributes"
                         className={classes.newsletters_box__navbar___ul____item}
                      >
                         <Text
