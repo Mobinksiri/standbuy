@@ -7,10 +7,14 @@
    flex-flow: column;
    align-items: center;
    margin-bottom: 24px;
+   margin-top: 64px;
 
    @media screen and (max-width: 520px) {
       width: calc(100% - 32px);
-      // width: 100%;
+   }
+
+   @media screen and (max-width: 425px) {
+      margin-top: 32px;
    }
 
    h3 {
