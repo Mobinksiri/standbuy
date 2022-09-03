@@ -13,6 +13,7 @@ const Account = () => {
       name: "مبین کثیری",
    });
 
+   // information inputs
    const informationInput = [
       {
          name: "name",
@@ -34,6 +35,7 @@ const Account = () => {
       },
    ];
 
+   // information inputs process
    const inputChangeHandler = (e) => {
       // value change
       setValues({ ...values, [e.target.name]: e.target.value });
@@ -53,7 +55,6 @@ const Account = () => {
             emailInput = element.value;
          }
       }
-
       if (nameInput !== nameValue || emailInput !== emailValue) {
          button.classList.add(
             classes.account_information__box___form____button_____active
@@ -65,12 +66,14 @@ const Account = () => {
       }
    };
 
+   // form submit
    const formSubmitHandler = (e) => {
       e.preventDefault();
    };
 
    return (
       <div className={classes.account}>
+         {/* information */}
          <div className={classes.account_information}>
             <div className={classes.account_information__box}>
                <Text type="Body4" color="white" element="h6">
@@ -102,6 +105,8 @@ const Account = () => {
                </form>
             </div>
          </div>
+
+         {/* password change */}
          <div className={classes.account_password}>
             <div className={classes.account_password__box}>
                <Text type="Body4" color="white" element="h6">

@@ -9,15 +9,18 @@ const Dropdown = ({ dropDownStyle }) => {
    const [modal, setModal] = useState(false);
    const router = useRouter();
 
+   // modal active process
    const modalActiveHandler = () => {
       setModal(true);
    };
 
+   // ---
    const closePageHandler = () => {
       setModal(false);
       router.push("/");
    };
 
+   // modal close process
    const modalCloseHandler = (e) => {
       const modal = document.querySelector("#modal");
       const cancel = document.querySelector("#cancel");
@@ -29,6 +32,7 @@ const Dropdown = ({ dropDownStyle }) => {
          : setModal(true);
    };
 
+   // ---
    const dropdownActiveHandler = () => {
       setActive(!active);
    };
@@ -96,6 +100,7 @@ const Dropdown = ({ dropDownStyle }) => {
             onClick={modalCloseHandler}
          >
             <div className={classes.modal_items}>
+               {/* modal items header */}
                <div className={classes.modal_items__head}>
                   <Text type="Head6" color="white" element="h4">
                      خروج از حساب کاربری
@@ -104,6 +109,8 @@ const Dropdown = ({ dropDownStyle }) => {
                      آیا مایل به خروج از حساب کاربری هستید؟
                   </Text>
                </div>
+
+               {/* modal items buttons */}
                <div className={classes.modal_items__buttons}>
                   <Link href="/">
                      <button

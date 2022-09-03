@@ -24,6 +24,7 @@ const Questions = () => {
       <div id="questions" className={classes.questions}>
          <Container>
             <div className={classes.questions_box}>
+               {/* header */}
                <div className={classes.questions_box__header}>
                   <svg
                      width="50"
@@ -50,6 +51,8 @@ const Questions = () => {
                      مخاطبان پرسیده می‌شود را مشاهده نمائید.
                   </Text>
                </div>
+
+               {/* questions list */}
                <div
                   id="questions_list"
                   className={classes.questions_box__questions}

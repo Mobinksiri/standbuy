@@ -14,6 +14,7 @@ const Post = () => {
    const [post, setPost] = useState();
    const [id, setId] = useState();
 
+   // get post function
    const getPostHandler = () => {
       const postsList = posts;
       let foundedPost = postsList.filter((post) => post.id == id);
@@ -29,6 +30,7 @@ const Post = () => {
 
    return (
       <>
+         {/* navbar */}
          <NavHome
             nav={[
                { title: "ویژگی ها", id: "attributes" },
@@ -38,6 +40,8 @@ const Post = () => {
             ]}
             type="home"
          />
+
+         {/* post */}
          <Container>
             {post && (
                <PostComponent
@@ -49,6 +53,8 @@ const Post = () => {
                />
             )}
          </Container>
+
+         {/* footer */}
          <Footer />
       </>
    );

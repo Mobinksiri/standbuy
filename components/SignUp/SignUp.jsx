@@ -10,7 +10,6 @@ const SignUp = () => {
    const router = useRouter();
    const [rule, setRule] = useState(false);
 
-   // input process
    const [values, setValues] = useState({
       email: "",
       password: "",
@@ -18,6 +17,8 @@ const SignUp = () => {
       name: "",
       mobile: "",
    });
+
+   // inputs array
    const signUpInputs = [
       {
          name: "name",
@@ -66,6 +67,8 @@ const SignUp = () => {
          iconClick: iconClickHandler,
       },
    ];
+
+   // input change handler
    const inputChangeHandler = (e) => {
       const { name, value } = e.target;
       setValues({ ...values, [name]: value });
@@ -86,6 +89,8 @@ const SignUp = () => {
          formButton.classList.remove(classes.signUp_form__buttonActive);
       }
    };
+
+   // submit process
    const onSubmitHandler = (e) => {
       e.preventDefault();
       const data = new FormData(e.target);
@@ -99,7 +104,7 @@ const SignUp = () => {
       e.target == modal ? setRule(false) : null;
    };
 
-   // icon click handler
+   // password input show and hide process
    function iconClickHandler(e) {
       const svg = e.target;
       if (svg.style.opacity == "0.5") {
@@ -113,6 +118,7 @@ const SignUp = () => {
 
    return (
       <>
+         {/* form */}
          <div className={classes.signUp}>
             <Form
                onSubmit={onSubmitHandler}
@@ -158,6 +164,8 @@ const SignUp = () => {
                }
             />
          </div>
+
+         {/* rule */}
          <div
             onClick={closeRuleHandler}
             className={

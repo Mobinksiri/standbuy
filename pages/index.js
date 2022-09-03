@@ -5,6 +5,7 @@ import Accordion from "../components/Home/Accordion/Accordion";
 import Footer from "../components/statics/Footer/Footer";
 import NewsLetters from "../components/Home/NewsLetters/NewsLetters";
 
+// dynamic imports ------
 const NavHome = dynamic(() => import("../components/statics/Navbars/NavHome"));
 const Properties = dynamic(() =>
    import("../components/Home/Properties/Properties")

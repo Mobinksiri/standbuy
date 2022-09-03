@@ -5,9 +5,12 @@ import classes from "./Properties.module.scss";
 const Property = ({ image, alt, icon, title, paragraph }) => {
    return (
       <div className={classes.properties_box__property}>
+         {/* image */}
          <div className={classes.properties_box__property___image}>
             <img src={image} alt={alt} />
          </div>
+
+         {/* description */}
          <div className={classes.properties_box__property___dec}>
             {icon}
             <Text type="Head3" element="h2" color="white">
@@ -16,6 +19,8 @@ const Property = ({ image, alt, icon, title, paragraph }) => {
             <Text type="Paragraph1" element="p" color="#C0C0C0">
                {paragraph}
             </Text>
+
+            {/* buttons */}
             <div className={classes.properties_box__property___dec____buttons}>
                <button type="button">
                   <svg

@@ -17,6 +17,8 @@ const Input = (props) => {
             onChange={inputProps.onChange}
             {...inputProps}
          />
+
+         {/* password show icon */}
          {icon ? (
             <svg
                style={{ opacity: "0.5" }}
@@ -41,6 +43,8 @@ const Input = (props) => {
                />
             </svg>
          ) : null}
+
+         {/* error span */}
          {span == true ? (
             <span
                style={{

@@ -5,6 +5,7 @@ import Container from "../../statics/Container/Container";
 import Post from "./Post";
 import { posts } from "../../../posts";
 
+// swiper imports
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -12,6 +13,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 const Blog = () => {
+   // get window width
    const useWidth = () => {
       const [width, setWidth] = useState(0);
       const handleResize = () => setWidth(window.innerWidth);
@@ -26,6 +28,7 @@ const Blog = () => {
    const breakpoint = 768;
    const breakpointMobile = 425;
 
+   // desktop mode
    const DesktopPosts = (
       <div className={classes.blog_box__posts}>
          {posts.map((post) => (
@@ -40,6 +43,7 @@ const Blog = () => {
       </div>
    );
 
+   // mobile mode
    const MobilePosts = (
       <Swiper
          className={classes.swiper}
@@ -68,6 +72,7 @@ const Blog = () => {
       <div id="blog" className={classes.blog}>
          <Container>
             <div className={classes.blog_box}>
+               {/* head */}
                <div className={classes.blog_box__head}>
                   <Text type="Head2" element="h2" color="white">
                      وبلاگ
@@ -89,6 +94,8 @@ const Blog = () => {
                      </svg>
                   </Text>
                </div>
+
+               {/* posts */}
                {width > breakpoint ? DesktopPosts : MobilePosts}
             </div>
          </Container>

@@ -11,6 +11,8 @@ const ForgetPassword = () => {
    const [values, setValues] = useState({
       email: "",
    });
+
+   // inputs
    const forgetPasswordInputs = [
       {
          name: "email",
@@ -46,6 +48,8 @@ const ForgetPassword = () => {
          formButton.classList.remove(classes.forgetPassword_form__buttonActive);
       }
    };
+
+   // submit process
    const onSubmitHandler = (e) => {
       e.preventDefault();
       const data = new FormData(e.target);

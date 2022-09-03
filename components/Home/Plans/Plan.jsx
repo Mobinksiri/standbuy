@@ -18,6 +18,7 @@ const Plan = ({
          id={id}
          className={`${classes.plans_box__items___item} ${className}`}
       >
+         {/* header */}
          <div className={classes.plans_box__items___item____head}>
             <div className={classes.plans_box__items___item____head_____title}>
                <Text type="Head4" color="white" element="h4">
@@ -41,6 +42,8 @@ const Plan = ({
                </Text>
             </button>
          </div>
+
+         {/* tags */}
          <div className={classes.plans_box__items___item____tags}>
             {tags.map((tag, index) => (
                <div

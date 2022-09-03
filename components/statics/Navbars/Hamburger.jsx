@@ -17,6 +17,7 @@ const Hamburger = ({
 
    return (
       <div className={classes.hamburger}>
+         {/* hamburger */}
          <div
             onClick={navbarActiveHandler}
             className={classes.hamburger_icon__box}
@@ -33,6 +34,8 @@ const Hamburger = ({
                <div className={classes.hamburger_icon__side}></div>
             </div>
          </div>
+
+         {/* hamburger items */}
          <ul
             className={
                active

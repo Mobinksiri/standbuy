@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 const Success = () => {
    const router = useRouter();
 
+   // submit process
    const onSubmitHandler = (e) => {
       e.preventDefault();
       const data = new FormData(e.target);

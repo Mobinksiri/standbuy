@@ -9,6 +9,7 @@ const Header = () => {
       <div className={classes.header}>
          <Container>
             <div className={classes.header_box}>
+               {/* description */}
                <div className={classes.header_box__dec}>
                   <div className={classes.header_box__dec___box}>
                      <Text type="Head1" color="white" element="h1">
@@ -35,6 +36,8 @@ const Header = () => {
                      <Emoji />
                   </div>
                </div>
+
+               {/* image */}
                <div className={classes.header_box__image}>
                   <img src="/header/phone.png" alt="standBuy" />
                </div>

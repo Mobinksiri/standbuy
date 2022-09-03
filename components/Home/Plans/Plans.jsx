@@ -6,12 +6,14 @@ import DesktopPlan from "./DesktopPlan";
 import MobilePlan from "./MobilePlan";
 
 const Plans = () => {
+   // states
    const [modal, setModal] = useState(false);
    const [selectedPlan, setSelectedPlan] = useState();
    const [selectedPrice, setSelectedPrice] = useState();
    const [modalAnimation, setModalAnimation] = useState(false);
    const [counter, setCounter] = useState(0);
 
+   // get window width
    const useWidth = () => {
       const [width, setWidth] = useState(0);
       const handleResize = () => setWidth(window.innerWidth);
@@ -43,7 +45,7 @@ const Plans = () => {
       return () => clearInterval(timer);
    }, [counter]);
 
-   // --
+   // open modal process
    const openModalHandler = (e) => {
       setCounter(6);
       // Get Title and Price
@@ -57,7 +59,7 @@ const Plans = () => {
       setSelectedPrice(selectedPlanPrice);
    };
 
-   // --
+   // close modal process
    const closeModalHandler = () => {
       setModal(false);
       setCounter(0);
@@ -114,6 +116,7 @@ const Plans = () => {
                         : classes.modal_box
                   }
                >
+                  {/* modal header */}
                   <div className={classes.modal_box__head}>
                      <div className={classes.modal_box__head___selected}>
                         <Text type="Body4" element="p" color="white">
@@ -138,6 +141,8 @@ const Plans = () => {
                         />
                      </svg>
                   </div>
+
+                  {/* modal timer */}
                   <div className={classes.modal_box__timer}>
                      <Text type="Body4" element="h5" color="#878787">
                         شما تا <span id="count">0</span> ثانیه دیگر به درگاه

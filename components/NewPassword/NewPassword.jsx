@@ -13,6 +13,8 @@ const NewPassword = () => {
       password: "",
       passwordConfirm: "",
    });
+
+   // inputs array
    const newPasswordInputs = [
       {
          name: "prevPassword",
@@ -48,7 +50,7 @@ const NewPassword = () => {
       },
    ];
 
-   // input process
+   // input change process
    const inputChangeHandler = (e) => {
       // set value
       const { name, value } = e.target;
@@ -72,6 +74,8 @@ const NewPassword = () => {
          formButton.classList.remove(classes.newPassword_form__buttonActive);
       }
    };
+
+   // submit process
    const onSubmitHandler = (e) => {
       e.preventDefault();
       const data = new FormData(e.target);
@@ -79,7 +83,7 @@ const NewPassword = () => {
       router.push("/success");
    };
 
-   // icon click handler
+   // password input show and hide process
    function iconClickHandler(e) {
       const svg = e.target;
       if (svg.style.opacity == "0.5") {

@@ -3,6 +3,7 @@ import Text from "../../styles/Text";
 import classes from "./Subscription.module.scss";
 
 const Subscription = () => {
+   // telegram token active function
    const telegramTokenHandler = (e) => {
       const button = e.target;
       button.style.opacity = "0.5";
@@ -11,11 +12,14 @@ const Subscription = () => {
 
    return (
       <div className={classes.subscription}>
+         {/* active side */}
          <div className={classes.subscription_active}>
             <div className={classes.subscription_active__box}>
                <Text type="Body4" color="white" element="h4">
                   اشتراک فعال
                </Text>
+
+               {/* table */}
                <div className={classes.subscription_active__box___table}>
                   <div
                      className={classes.subscription_active__box___table____col}
@@ -91,11 +95,15 @@ const Subscription = () => {
                </button>
             </div>
          </div>
+
+         {/* disable side */}
          <div className={classes.subscription_disable}>
             <div className={classes.subscription_disable__box}>
                <Text type="Body4" color="white" element="h4">
                   اشتراک فعال
                </Text>
+
+               {/* table */}
                <div className={classes.subscription_disable__box___table}>
                   <div
                      className={

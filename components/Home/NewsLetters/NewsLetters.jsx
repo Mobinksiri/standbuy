@@ -9,6 +9,7 @@ const NewsLetters = () => {
    const [inputValue, setInputValue] = useState("");
    const router = useRouter();
 
+   // news input
    const newsInput = {
       name: "newsLetters",
       type: "email",
@@ -18,10 +19,12 @@ const NewsLetters = () => {
       span: false,
    };
 
+   // news input change function
    const changeHandler = (e) => {
       setInputValue(e.target.value);
    };
 
+   // get window width
    const useWidth = () => {
       const [width, setWidth] = useState(0);
       const handleSize = () => setWidth(window.innerWidth);
@@ -34,7 +37,6 @@ const NewsLetters = () => {
       }, [width]);
       return width;
    };
-
    const width = useWidth();
    const breakpoint = 425;
 
@@ -51,6 +53,7 @@ const NewsLetters = () => {
            );
    }, [width]);
 
+   // bottom nav process
    const navProcessHandler = (e) => {
       const id = e.target.parentElement.id;
       if (id == "top") {
@@ -61,6 +64,7 @@ const NewsLetters = () => {
       }
    };
 
+   // news input submit
    const submitHandler = (e) => {
       e.preventDefault();
       const form = new FormData(e.target);
@@ -71,6 +75,7 @@ const NewsLetters = () => {
       <div id="newsletter" className={classes.newsletters}>
          <Container>
             <div className={classes.newsletters_box}>
+               {/* bottom navbar */}
                <div className={classes.newsletters_box__navbar}>
                   <ul className={classes.newsletters_box__navbar___ul}>
                      <li
@@ -140,6 +145,8 @@ const NewsLetters = () => {
                      </li>
                   </ul>
                </div>
+
+               {/* news letter */}
                <form
                   id="newsletters_form"
                   className={classes.newsletters_box__newsletters}

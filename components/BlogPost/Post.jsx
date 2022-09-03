@@ -3,6 +3,7 @@ import Text from "../styles/Text";
 import classes from "./Post.module.scss";
 
 const Post = ({ image, title, body, writer, date }) => {
+   // copy function
    const copyHandler = (e) => {
       const el = document.createElement("input");
       el.value = window.location.href;
@@ -20,10 +21,14 @@ const Post = ({ image, title, body, writer, date }) => {
 
    return (
       <div className={classes.post}>
+         {/* image */}
          <div className={classes.post_image}>
             <img className={classes.post_image__img} src={image} alt={title} />
          </div>
+
+         {/* header */}
          <div className={classes.post_header}>
+            {/* title */}
             <div className={classes.post_header__title}>
                <Text type="Head2" element="h2" color="white">
                   {title}
@@ -35,6 +40,8 @@ const Post = ({ image, title, body, writer, date }) => {
                   دسته بندی
                </Text>
             </div>
+
+            {/* copy button */}
             <div className={classes.post_header__copy}>
                <button onClick={copyHandler} type="button">
                   <svg
@@ -76,6 +83,8 @@ const Post = ({ image, title, body, writer, date }) => {
                </button>
             </div>
          </div>
+
+         {/* body */}
          <div
             className={classes.post_body}
             dangerouslySetInnerHTML={{ __html: body }}

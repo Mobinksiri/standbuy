@@ -2,14 +2,16 @@ import React, { useState, useEffect } from "react";
 import Container from "../../statics/Container/Container";
 import classes from "./Section.module.scss";
 import SectionPost from "./SectionPost";
-import { Swiper, SwiperSlide } from "swiper/react";
 
+// swiper imports
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 const Section = () => {
+   // get window width
    const useWidth = () => {
       const [width, setWidth] = useState(0);
       const handleResize = () => setWidth(window.innerWidth);
@@ -20,11 +22,11 @@ const Section = () => {
       }, [handleResize]);
       return width;
    };
-
    const width = useWidth();
    const breakpoint = 768;
    const breakpointMobile = 425;
 
+   // desktop
    const DesktopSection = (
       <div className={classes.section_box}>
          <SectionPost
@@ -45,6 +47,7 @@ const Section = () => {
       </div>
    );
 
+   // mobile
    const MobileSection = (
       <Swiper
          className={classes.swiper}

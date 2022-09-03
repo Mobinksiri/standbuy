@@ -11,6 +11,8 @@ const Login = () => {
       email: "",
       password: "",
    });
+
+   // inputs array
    const loginInputs = [
       {
          name: "email",
@@ -58,6 +60,8 @@ const Login = () => {
          formButton.classList.remove(classes.login_form__buttonActive);
       }
    };
+
+   // submit login
    const onSubmitHandler = (e) => {
       e.preventDefault();
       const data = new FormData(e.target);
@@ -65,7 +69,7 @@ const Login = () => {
       router.push("/dashboard");
    };
 
-   // svg
+   // password input show and hide process
    function iconClickHandler(e) {
       const svg = e.target;
       if (svg.style.opacity == "0.5") {

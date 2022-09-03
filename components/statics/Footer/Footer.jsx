@@ -8,6 +8,7 @@ const Footer = () => {
       <div className={classes.footer}>
          <Container>
             <div className={classes.footer_box}>
+               {/* copy right section */}
                <div className={classes.footer_box__copyright}>
                   <div className={classes.footer_box__copyright___social}>
                      <a href="https://www.instagram.com/mobinksiri/">
@@ -74,6 +75,8 @@ const Footer = () => {
                      </Text>
                   </div>
                </div>
+
+               {/* poster section */}
                <div className={classes.footer_box__poster}>
                   <img src="/footer/frames.png" alt="" />
                </div>

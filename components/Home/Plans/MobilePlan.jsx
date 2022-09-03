@@ -2,6 +2,7 @@ import React from "react";
 import Plan from "./Plan";
 import classes from "./Plans.module.scss";
 
+// swiper imports
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";

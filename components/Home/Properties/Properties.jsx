@@ -2,14 +2,16 @@ import React, { useState, useEffect } from "react";
 import Container from "../../statics/Container/Container";
 import classes from "./Properties.module.scss";
 import Property from "./Property";
-import { Swiper, SwiperSlide } from "swiper/react";
 
+// swiper imports
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 const Properties = () => {
+   // get window width
    const useWidth = () => {
       const [width, setWidth] = useState(0);
       const handleResize = () => setWidth(window.innerWidth);
@@ -20,11 +22,11 @@ const Properties = () => {
       }, [handleResize]);
       return width;
    };
-
    const width = useWidth();
    const breakpoint = 768;
    const breakpointMobile = 425;
 
+   // desktop
    const DesktopProperties = (
       <div className={classes.properties_box}>
          <Property
@@ -103,6 +105,7 @@ const Properties = () => {
       </div>
    );
 
+   // mobile
    const MobileProperties = (
       <Swiper
          className={classes.swiper}
@@ -195,6 +198,7 @@ const Properties = () => {
    return (
       <div id="attributes" className={classes.properties}>
          <Container>
+            {/* propoerties top arrow */}
             <div className={classes.properties_arrow}>
                <svg
                   width="19"
@@ -210,6 +214,8 @@ const Properties = () => {
                   />
                </svg>
             </div>
+
+            {/* get propersties */}
             {width > breakpoint ? DesktopProperties : MobileProperties}
          </Container>
       </div>

@@ -4,6 +4,7 @@ import Container from "../../statics/Container/Container";
 import AccordionItem from "./AccordionItem";
 
 const Accordion = () => {
+   // accordion open process
    const accordionOpenHandler = (e) => {
       // remove activity for all
       const accordionBox = document.querySelectorAll("#accordion_box");
